@@ -49,10 +49,10 @@ for man_vs_coast_runner in man_vs_coast_runners:
 
                 if (man_vs_coast_runner_name == man_vs_lakes_runner_name ==man_vs_mountain_runner_name ):
                     #If there is a match, Then add this to the Match List.
-                    name = man_vs_coast_runner_name
-                    man_vs_coast_time = "Coast : " + str( man_vs_coast_runner[5] ) +" "
-                    man_vs_lakes_time = "Lakes : "+ str(man_vs_lakes_runner[5]) +" "
-                    man_vs_mountain_time = "Mountain : " +str(man_vs_mountain_runner[5]) +" "
+                    name = man_vs_coast_runner_name +" , "
+                    man_vs_coast_time = "Coast : " + str( man_vs_coast_runner[5] ) +" , "
+                    man_vs_lakes_time = "Lakes : "+ str(man_vs_lakes_runner[5]) +" , "
+                    man_vs_mountain_time = "Mountain : " +str(man_vs_mountain_runner[5]) +" , "
                     try:
                         man_vs_total_time = SumTime ([man_vs_coast_runner[5], man_vs_lakes_runner[5],man_vs_mountain_runner[5]])
                     except:
