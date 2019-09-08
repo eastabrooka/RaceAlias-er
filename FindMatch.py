@@ -50,16 +50,16 @@ for man_vs_coast_runner in man_vs_coast_runners:
                 if (man_vs_coast_runner_name == man_vs_lakes_runner_name ==man_vs_mountain_runner_name ):
                     #If there is a match, Then add this to the Match List.
                     name = man_vs_coast_runner_name +" , "
-                    man_vs_coast_time = "Coast : " + str( man_vs_coast_runner[5] ) +" , "
-                    man_vs_lakes_time = "Lakes : "+ str(man_vs_lakes_runner[5]) +" , "
-                    man_vs_mountain_time = "Mountain : " +str(man_vs_mountain_runner[5]) +" , "
+                    man_vs_coast_time = "Coast :\t " + str( man_vs_coast_runner[5] ) +" , "
+                    man_vs_lakes_time = "Lakes :\t "+ str(man_vs_lakes_runner[5]) +" , "
+                    man_vs_mountain_time = "Mountain :\t " +str(man_vs_mountain_runner[5]) +" , "
                     try:
                         man_vs_total_time = SumTime ([man_vs_coast_runner[5], man_vs_lakes_runner[5],man_vs_mountain_runner[5]])
                     except:
                         #print("Maybe this Person DNF'd")
                         #print([man_vs_coast_runner[5], man_vs_lakes_runner[5], man_vs_mountain_runner[5]])
                         man_vs_total_time = "Unknown"
-                    report_string = str(name) + str(man_vs_lakes_time) + str(man_vs_coast_time) + str(man_vs_mountain_time) + "Man Vs Total Time :" + man_vs_total_time
+                    report_string = str(name) + str(man_vs_lakes_time) + str(man_vs_coast_time) + str(man_vs_mountain_time) + "Man Vs Total Time :\t" + man_vs_total_time
 
                     match_list += [report_string]
 
