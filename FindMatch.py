@@ -25,11 +25,11 @@ for man_vs_coast_runner in man_vs_coast_runners:
     man_vs_coast_runner_name = str(man_vs_coast_runner[1].upper()) +" " + str(man_vs_coast_runner[2].upper())
     for man_vs_lakes_runner in man_vs_lakes_runners:
         man_vs_lakes_runner_name = str(man_vs_lakes_runner[1].upper()) + " " + str(man_vs_lakes_runner[2].upper())
-        for man_vs_mountain_runner in man_vs_mountain_runners:
-            man_vs_mountain_runner_name = str(man_vs_mountain_runner[1].upper()) + " " + str(man_vs_mountain_runner[2].upper())
-            #print(man_vs_coast_runner_name,man_vs_lakes_runner_name,man_vs_mountain_runner_name)
-            if (man_vs_coast_runner_name == man_vs_lakes_runner_name ==man_vs_mountain_runner_name ):
-                match_list += [man_vs_coast_runner_name]
+        if (man_vs_coast_runner_name == man_vs_lakes_runner_name):
+            for man_vs_mountain_runner in man_vs_mountain_runners:
+                man_vs_mountain_runner_name = str(man_vs_mountain_runner[1].upper()) + " " + str(man_vs_mountain_runner[2].upper())
+                if (man_vs_coast_runner_name == man_vs_lakes_runner_name ==man_vs_mountain_runner_name ):
+                    match_list += [man_vs_coast_runner_name]
 print(match_list)
 
 print("--- %s seconds ---" % (time.time() - start_time))
